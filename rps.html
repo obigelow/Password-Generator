@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+</head>
+<body>
+
+    <script>
+
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;   
+
+
+        for (var i = 0; i < 10; i++) {
+
+
+        
+        var userGuess = prompt("Choose: rock, paper, or scissors")
+
+        var lowerCaseUserGuess = userGuess.toLowerCase();
+
+        var comOptions = ["rock", "paper", "scissors"];
+
+        var comGuess = comOptions[Math.floor(Math.random() * comOptions.length)];
+
+        if (userGuess === comGuess ) {
+            ties++
+            alert("The computer guessed " + comGuess)
+            alert("You have tied " + ties + " time(s)")
+        }
+        else if (userGuess === "rock" && comGuess === "scissors"){
+            wins++
+            alert("The computer guessed " + comGuess)
+            alert("You have won " + wins + " time(s)")
+        }
+        else if (userGuess === "paper" && comGuess === "rock") {
+            wins++
+            alert("The computer guessed " + comGuess)
+            alert("You have won " + wins + " time(s)")
+        }
+        else if (userGuess === "scissors" && comGuess === "paper"){
+            wins++
+            alert("The computer guessed " + comGuess)
+            alert("You have won " + wins + " time(s)")
+        }
+        else if (userGuess === "rock" && comGuess === "paper"){
+            losses++
+            alert("The computer guessed " + comGuess)
+            alert("You have lost " + losses + " time(s)")
+        }
+        else if (userGuess === "paper" && comGuess === "scissors"){
+            losses++
+            alert("The computer guessed " + comGuess)
+            alert("You have lost " + losses + " time(s)")
+        }
+        else if (userGuess === "scissors" && comGuess === "rock"){
+            losses++
+            alert("The computer guessed " + comGuess)
+            alert("You have lost " + losses + " time(s)")
+        }
+
+        }
+      alert("wins: " + wins)
+      alert("losses: " + losses)
+      alert("ties: " + ties)
+
+    </script>
+    
+</body>
+</html>
